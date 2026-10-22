@@ -1,0 +1,16 @@
+{
+  "id": "./editor.html?app=editor",
+  "name": "Buen Camino — edición",
+  "short_name": "Buen Camino edit",
+  "description": "Acceso privado para editar las lecturas y reflexiones del Camino.",
+  "lang": "es",
+  "start_url": "./editor.html?modo=editar",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f2e9",
+  "theme_color": "#f5f2e9",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

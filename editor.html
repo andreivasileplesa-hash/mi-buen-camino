@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2e9"><link rel="manifest" href="manifest-editor.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><meta name="description" content="Tu espacio privado para editar lecturas, reflexiones y etapas del Camino.">
+  <title>Buen Camino — edición</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#inicio"><span class="shell">✳</span> buen camino</a><span class="top-note">UN CAMINO POR DENTRO Y POR FUERA</span></header>
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">CAMINO FRANCÉS <span>·</span> ÚLTIMOS 100 KM</p><h1>Un paso.<br><em>Una pausa.</em></h1><p class="intro">Camina hacia Santiago con tiempo para escuchar lo que llevas dentro.</p><a class="button button-dark" href="#etapas">Ver mis etapas <span>↓</span></a></div>
+      <div class="hero-art" aria-label="Ilustración de un sendero hacia las montañas"><div class="sun"></div><div class="ridge ridge-back"></div><div class="ridge ridge-front"></div><div class="path"></div><span class="art-label">SANTIAGO<br>DE COMPOSTELA</span><span class="art-star">✳</span></div>
+      <div class="hero-foot"><span>✳</span> SANTIAGO TE ESPERA <span class="foot-line"></span> 5 ETAPAS <span class="foot-line"></span> 115 KM</div>
+    </section>
+    <section class="today" aria-labelledby="today-title">
+      <div class="today-heading"><div><p class="eyebrow">UNA PAUSA PARA HOY</p><h2 id="today-title">El Evangelio del día</h2></div><label class="date-label">FECHA <input id="reading-date" type="date"></label></div>
+      <div class="reading-card"><div class="reading-symbol">✳</div><div class="reading-content"><p id="reading-day" class="reading-day"></p><h3 id="reading-reference">Lc 12, 49-53</h3><p class="reading-caption"></p><p id="reading-text" class="reading-text"></p><div class="reading-links"><a id="reading-link" href="https://www.ewtn.com/es/lecturas/2026-10-22" target="_blank" rel="noreferrer">Leer el Evangelio completo <span>↗</span></a><span class="reading-separator" id="separator-one">·</span><span id="first-reading"></span><span class="reading-separator" id="separator-two">·</span><span id="psalm-reading"></span></div></div><span class="card-index">01 / 01</span></div>
+      <details class="edit-panel" id="day-editor" open><summary>Editar lecturas y reflexión de este día</summary><form id="day-form" class="edit-form"><label>Evangelio (referencia)<input name="reference" placeholder="Ej.: Lc 12, 49-53"></label><label>Evangelista<input name="evangelist" placeholder="Ej.: san Lucas"></label><label>Evangelio (texto o notas)<textarea name="gospelText" rows="3" placeholder="Escribe o pega aquí el Evangelio..."></textarea></label><div class="form-row"><label>Primera lectura<input name="first" placeholder="Ej.: Ef 3, 14-21"></label><label>Salmo<input name="psalm" placeholder="Ej.: Salmo 32"></label></div><label>Reflexión del día<textarea name="reflection" rows="3" placeholder="Tu reflexión para esta jornada..."></textarea></label><button class="button button-dark" type="submit">Guardar este día <span>✓</span></button><span class="save-status" id="day-save-status" aria-live="polite"></span></form></details><div class="daily-reflection-wrap" id="daily-reflection-wrap"><p id="daily-reflection" class="daily-reflection"></p></div><p class="source-note">Las lecturas y reflexiones se comparten entre los dos enlaces cuando el almacenamiento en la nube está configurado.</p>
+    </section>
+    <section class="stages" id="etapas"><div class="section-heading"><div><p class="eyebrow">TU RUTA · DE SARRIA A SANTIAGO</p><h2>Cinco días para llegar</h2></div><p class="section-aside">Elige una etapa para encontrar<br>su reflexión y una pregunta para el camino.</p></div>
+      <div class="stage-layout"><nav class="stage-list" aria-label="Etapas del Camino" id="stage-list"></nav><article class="reflection" id="reflection" aria-live="polite"></article></div>
+    </section>
+    <footer><span class="brand"><span class="shell">✳</span> buen camino</span><span>Que cada paso te acerque a lo esencial.</span><a href="#inicio">VOLVER ARRIBA ↑</a></footer>
+  </main><script src="config.js"></script><script src="app.js"></script><script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("./sw.js").catch(() => {});</script>
+</body></html>
